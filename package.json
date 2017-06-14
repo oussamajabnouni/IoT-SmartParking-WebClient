@@ -1,13 +1,33 @@
 {
-  "name": "my-app",
+  "name": "QuickParkWebAPP",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^15.6.0",
-    "react-dom": "^15.6.0"
-  },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1",
+    "font-awesome": "4.7.0",
+    "group-array": "^0.3.3",
+    "history": "^4.3.0",
+    "marked": "^0.3.6",
+    "material-ui": "^0.17.4",
+    "prop-types": "^15.5.8",
+    "react": "^15.3.2",
+    "react-credit-cards": "^0.4.1",
+    "react-dom": "^15.3.2",
+    "react-dropzone": "^3.13.1",
+    "react-google-maps": "^6.3.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-stripe-elements": "0.0.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "recharts": "0.20.8",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "socket.io-client": "^2.0.1",
+    "superagent": "^2.3.0",
+    "superagent-promise": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
