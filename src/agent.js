@@ -36,8 +36,8 @@ const Auth = {
     requests.get('/admins'),
   login: (email, password) =>
     requests.post('/admins/login', { user: { email, password } }),
-  register: (email) =>
-    requests.post('/admins', { email }),
+  register: (email,share) =>
+    requests.post('/admins', { email,share}),
   save: user =>
     requests.put('/admin', { user }),
   withdraw: () =>

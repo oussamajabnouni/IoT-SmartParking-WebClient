@@ -22,7 +22,7 @@ class AddOwner extends React.Component {
       let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       let regex = new RegExp(re);
       if (this.state.email&&regex.test(this.state.email)){
-        agent.Auth.register(this.state.email).then(response=>{
+        agent.Auth.register(this.state.email,this.state.share).then(response=>{
             this.setState({success: true})
         }).catch(error=> this.setState({msgError: 'Email already taken'}) )
       }else{this.setState({msgError: 'Email is invalid or empty'})}
@@ -30,6 +30,11 @@ class AddOwner extends React.Component {
     this.handleChange = ev => {
       this.setState({
         email: ev.target.value
+      });     
+    }
+    this.handleShare = ev => {
+      this.setState({
+        share: ev.target.value
       });     
     }
     this.handleClose = () => {
@@ -96,8 +101,8 @@ class AddOwner extends React.Component {
           disabled={this.s}
           errorStyle={styles.errortxt}
           errorText={this.state.msgError}
-          value={this.state.email}
-          onChange={this.handleChange}
+          value={this.state.share}
+          onChange={this.handleShare}
         />
         <div style={styles.buttons}>
           <Link to="/owners">
